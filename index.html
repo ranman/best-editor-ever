@@ -60,7 +60,7 @@
       </div>
     </div>
   </div> <!-- /container -->
-  <footer>Made with ❤️ by <a href="https://twitter.com/jrhunt">@jrhunt</a>. Code is <a href="https://github.com/ranman/best-editor-ever">here</a>.</footer>
+  <footer>Made with ❤️ by <a href="https://twitter.com/jrhunt">@jrhunt</a>. Code is <a href="https://github.com/ranman/best-editor-ever">here</a>. Screencast is <a href="https://youtu.be/3hjI_8I_CO8">here</a></footer>
   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.92.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.15/c3.min.js"></script>
@@ -70,7 +70,6 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
   IdentityPoolId: 'us-east-1:42c5b0de-4e06-4d7c-9a1f-3f23393211de',
 });
 var dynamodb = new AWS.DynamoDB();
-var cloudwatch = new AWS.CloudWatch();
 var columns = [];
 var chart = c3.generate({
   bindto: '#chart',
