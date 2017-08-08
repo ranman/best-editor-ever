@@ -52,6 +52,7 @@
     <div class="row">
       <div class="col-md-12">
         <p>A Lex Bot listens on the Amazon Connect instance for votes for different editors. An <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function receives the votes from Lex and updates the totals in a <a href="https://aws.amazon.com/dynamodb">DynamoDB</a> table. Read more on how this is built on the <a href="https://aws.amazon.com/blogs/aws/new-amazon-connect-and-amazon-lex-integration/">AWS Blog</a>. Also, a big thanks to <a href="https://twitter.com/jbnunn">Jeff Nunn</a> for creating <a href="https://medium.com/aws-activate-startup-blog/building-dynamic-dashboards-using-lambda-and-dynamodb-streams-part-1-217e2318ae17">this template</a>.</p>
+        <p>We do store a hash of your phone number to prevent people from voting more than once. We do not store the number itself.</p>
       </div>
     </div>
     <div class="row">
@@ -76,6 +77,33 @@ var chart = c3.generate({
   data: {
     type: 'donut',
     columns: columns
+  },
+  color: {
+    pattern: ["#4b96ff",
+"#becf1b",
+"#505ee6",
+"#409700",
+"#7c26a8",
+"#01ae40",
+"#cf3abc",
+"#a0d74f",
+"#ff6ecc",
+"#266000",
+"#d3a3ff",
+"#cdab00",
+"#64428c",
+"#c4cc7d",
+"#a60056",
+"#009566",
+"#a51121",
+"#81c2ff",
+"#c74d00",
+"#007cb4",
+"#ff9954",
+"#9ad3a8",
+"#863e02",
+"#ff9a8c",
+"#9a5757"]
   },
   tooltip: {
     format: {
